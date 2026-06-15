@@ -58,7 +58,7 @@ function NotFoundComponent() {
 					children: "আপনি যে পেজটি খুঁজছেন তা সরিয়ে নেওয়া হয়েছে বা বিদ্যমান নেই।"
 				}),
 				/* @__PURE__ */ jsx("a", {
-					href: "/",
+					href: "/citizen-connect-khulna-main/",
 					className: "mt-6 inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/90",
 					children: "হোমে ফিরুন"
 				})
@@ -95,7 +95,7 @@ function ErrorComponent({ error, reset }) {
 						className: "inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground",
 						children: "পুনরায় চেষ্টা করুন"
 					}), /* @__PURE__ */ jsx("a", {
-						href: "/",
+						href: "/citizen-connect-khulna-main/",
 						className: "inline-flex h-10 items-center justify-center rounded-md border px-5 text-sm",
 						children: "হোম"
 					})]
@@ -182,7 +182,7 @@ var Route$10 = createRootRouteWithContext()({
 function RootShell({ children }) {
 	return /* @__PURE__ */ jsxs("html", {
 		lang: "bn",
-		children: [/* @__PURE__ */ jsx("head", { children: /* @__PURE__ */ jsx(HeadContent, {}) }), /* @__PURE__ */ jsxs("body", { children: [children, /* @__PURE__ */ jsx(Scripts, {})] })]
+		children: [/* @__PURE__ */ jsxs("head", { children: [/* @__PURE__ */ jsx("base", { href: "/citizen-connect-khulna-main/" }), /* @__PURE__ */ jsx(HeadContent, {})] }), /* @__PURE__ */ jsxs("body", { children: [children, /* @__PURE__ */ jsx(Scripts, {})] })]
 	});
 }
 function RootComponent() {
@@ -235,7 +235,7 @@ var Route$6 = createFileRoute("/_authenticated")({
 });
 //#endregion
 //#region src/routes/index.tsx
-var $$splitComponentImporter$5 = () => import("./routes-abGTu7Ym.js");
+var $$splitComponentImporter$5 = () => import("./routes-CE8pBXD1.js");
 var Route$5 = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "খুলনা নাগরিক সেবা — Khulna City Corporation Citizen Services" },

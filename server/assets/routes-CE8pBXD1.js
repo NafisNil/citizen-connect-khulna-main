@@ -114,18 +114,19 @@ function SiteHeader() {
 	const { theme, toggle } = useTheme();
 	const navigate = useNavigate();
 	const [open, setOpen] = useState(false);
+	const base = "/citizen-connect-khulna-main/";
 	return /* @__PURE__ */ jsxs("header", {
 		className: "sticky top-0 z-40 w-full border-b bg-background/85 backdrop-blur-lg",
 		children: [/* @__PURE__ */ jsxs("div", {
 			className: "mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6",
 			children: [
-				/* @__PURE__ */ jsxs(Link, {
-					to: "/",
+				/* @__PURE__ */ jsxs("a", {
+					href: base,
 					className: "flex shrink-0 items-center gap-2.5",
 					children: [/* @__PURE__ */ jsx("div", {
 						className: "grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--gradient-hero)] text-primary-foreground shadow-[var(--shadow-elegant)]",
 						children: /* @__PURE__ */ jsx("img", {
-							src: "/khulan_logo.png",
+							src: "/citizen-connect-khulna-main/khulan_logo.png",
 							alt: "খুলনা লোগো",
 							className: "h-8 w-8 rounded-md object-contain"
 						})
@@ -143,7 +144,7 @@ function SiteHeader() {
 				/* @__PURE__ */ jsx("nav", {
 					className: "ml-6 hidden items-center gap-1 lg:flex",
 					children: nav.map((n) => /* @__PURE__ */ jsx("a", {
-						href: n.to,
+						href: base + n.to.replace(/^\//, ""),
 						className: "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground",
 						children: n.label
 					}, n.to))
@@ -228,7 +229,7 @@ function SiteHeader() {
 			children: /* @__PURE__ */ jsx("nav", {
 				className: "mx-auto flex max-w-7xl flex-col px-4 py-2",
 				children: nav.map((n) => /* @__PURE__ */ jsx("a", {
-					href: n.to,
+					href: base + n.to.replace(/^\//, ""),
 					onClick: () => setOpen(false),
 					className: "rounded-md px-3 py-3 text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground",
 					children: n.label
@@ -251,7 +252,7 @@ function SiteFooter() {
 						children: [/* @__PURE__ */ jsx("div", {
 							className: "grid h-10 w-10 place-items-center rounded-xl bg-accent text-accent-foreground",
 							children: /* @__PURE__ */ jsx("img", {
-								src: "/khulan_logo.png",
+								src: "/citizen-connect-khulna-main/khulan_logo.png",
 								alt: "খুলনা লোগো",
 								className: "h-8 w-8 rounded-md object-contain"
 							})
@@ -288,22 +289,22 @@ function SiteFooter() {
 					className: "mt-4 space-y-2.5 text-sm opacity-80",
 					children: [
 						/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", {
-							href: "/#services",
+							href: "/citizen-connect-khulna-main/#services",
 							className: "hover:opacity-100 hover:underline",
 							children: "সকল সেবা"
 						}) }),
 						/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", {
-							href: "/#notices",
+							href: "/citizen-connect-khulna-main/#notices",
 							className: "hover:opacity-100 hover:underline",
 							children: "নোটিশ"
 						}) }),
 						/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", {
-							href: "/auth",
+							href: "/citizen-connect-khulna-main/auth",
 							className: "hover:opacity-100 hover:underline",
 							children: "নিবন্ধন"
 						}) }),
 						/* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", {
-							href: "/#faq",
+							href: "/citizen-connect-khulna-main/#faq",
 							className: "hover:opacity-100 hover:underline",
 							children: "সাধারণ প্রশ্ন"
 						}) })
